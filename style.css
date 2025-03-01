@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(129deg, rgb(208, 55, 211) 0%, rgb(92, 24, 181) 100%);
+    color: #fff;
+}
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+}
+.hero h1 span {
+    color: brown;
+}
+textarea {
+    width: 35vw;
+    height: 30vh;
+    background-color: rgb(94, 24, 120);
+    color: #fff;
+    font-size: 1rem;
+    border: 0;
+    outline: 0;
+    padding: 1.1rem;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 2.2rem;
+    box-shadow: 3px 3px 4px black;
+}
+textarea::placeholder {
+    color: #ddd;
+}
+.row {
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+button {
+    background-color: brown;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2rem;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+select {
+    flex: 1;
+    color: #fff;
+    background: #403d84;
+    height: 50px;
+    padding: 10px 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 2rem;
+    /* appearance: none; */
+}
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 12em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
