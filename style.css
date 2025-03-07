@@ -4,6 +4,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
+
 .hero {
     width: 100%;
     min-height: 100vh;
@@ -13,16 +14,20 @@
     flex-direction: column;
     background: linear-gradient(129deg, rgb(208, 55, 211) 0%, rgb(92, 24, 181) 100%);
     color: #fff;
+    text-align: center;
 }
+
 .hero h1 {
     font-size: 2.8rem;
     font-weight: 500;
     margin-top: -3rem;
     margin-bottom: 3rem;
 }
+
 .hero h1 span {
     color: brown;
 }
+
 textarea {
     width: 35vw;
     height: 30vh;
@@ -37,15 +42,19 @@ textarea {
     margin-bottom: 2.2rem;
     box-shadow: 3px 3px 4px black;
 }
+
 textarea::placeholder {
     color: #ddd;
 }
+
 .row {
     width: 35vw;
     display: flex;
     align-items: center;
     gap: 20px;
+    justify-content: center;
 }
+
 button {
     background-color: brown;
     color: #fff;
@@ -70,36 +79,104 @@ select {
     outline: 0;
     border: 0;
     border-radius: 2rem;
-    /* appearance: none; */
 }
 
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-
-.line-1{
+.line-1 {
     position: relative;
-    top: 50%;  
+    top: 50%;
     width: 24em;
     margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
+    border-right: 2px solid rgba(255, 255, 255, .75);
     font-size: 180%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-50%);    
+    transform: translateY(-50%);
 }
 
 /* Animation */
-.anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
              blinkTextCursor 500ms steps(44) infinite normal;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 12em;}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 12em; }
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+
+@keyframes blinkTextCursor {
+    from { border-right-color: rgba(255, 255, 255, .75); }
+    to { border-right-color: transparent; }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .hero {
+        padding: 3rem;
+    }
+
+    textarea {
+        width: 80vw;
+        height: 25vh;
+    }
+
+    .row {
+        width: 80vw;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button, select {
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+
+    .line-1 {
+        width: 18em;
+        font-size: 150%;
+    }
+}
+
+/* For very small screens like mobile phones */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+
+    .hero {
+        padding: 0.5rem;
+    }
+
+    textarea {
+        width: 90vw;
+        height: 20vh;
+    }
+
+    .row {
+        width: 90vw;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button, select {
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+
+    .line-1 {
+        width: 14em;
+        font-size: 130%;
+    }
 }
